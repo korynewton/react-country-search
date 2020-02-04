@@ -13,3 +13,5 @@ export const homePageFontSize = '14px;';
 export const fontWeightLight = '300;';
 export const fontWeightMedium = '600;';
 export const fontWeightHeavy = '800;';
+
+export const boxShadow = '0px 4px 17px 0px lightgrey;';

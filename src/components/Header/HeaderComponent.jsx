@@ -1,5 +1,5 @@
 import React from 'react';
-import ModeIcon from './ModeIcons';
+import { ModeIcon } from './../Shared/Icon.components';
 import {
   StyledHeaderDiv,
   StyledH2,

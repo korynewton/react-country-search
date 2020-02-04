@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontWeightHeavy } from '../../styles/variables';
+import { fontWeightHeavy, boxShadow } from '../../styles/variables';
 
 export const StyledH2 = styled.h2`
   font-size: 1.7rem;
@@ -28,5 +28,5 @@ export const ModeDiv = styled.div`
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  box-shadow: 0 -10px 20px 9px lightgrey;
+  box-shadow: ${boxShadow};
 `;
