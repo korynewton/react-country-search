@@ -3,6 +3,10 @@ import ModeIcon from './ModeIcons';
 import {
   StyledHeaderDiv,
   StyledH2,
+<<<<<<< HEAD
+=======
+  ModeDiv,
+>>>>>>> 75ed193c16e71cf300bf60cb41add86e20b480c4
   HeaderContainer
 } from '../../styles/Header/Header.styles';
 
