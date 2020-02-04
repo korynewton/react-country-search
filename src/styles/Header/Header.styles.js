@@ -23,6 +23,7 @@ export const ModeDiv = styled.div`
   display: flex;
   justify-content: space-between;
   width: 24%;
+  cursor: pointer;
 `;
 
 export const HeaderContainer = styled.div`
