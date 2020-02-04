@@ -1,14 +1,20 @@
 import React from 'react';
-import { DarkModeIcon, LightModeIcon } from './ModeIcons';
+import ModeIcon from './ModeIcons';
+import {
+  StyledHeaderDiv,
+  StyledH2,
+  ModeDiv,
+  HeaderContainer
+} from '../../styles/Header/Header.styles';
 
 const Header = ({ mode }) => {
   return (
-    <div>
-      <h2>Where in the world?</h2>
-      <div className="mode">
-        {mode === 'light' ? <LightModeIcon /> : <DarkModeIcon />}
-      </div>
-    </div>
+    <HeaderContainer>
+      <StyledHeaderDiv>
+        <StyledH2>Where in the world?</StyledH2>
+        <ModeIcon mode={mode} />
+      </StyledHeaderDiv>
+    </HeaderContainer>
   );
 };
 
