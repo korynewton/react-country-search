@@ -1,26 +1,23 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StyledH4, ModeDiv } from '../../styles/Header/Header.styles';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMoon as darkMode } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as lightMode } from '@fortawesome/free-regular-svg-icons';
 
-// Add all icons to the library so you can use it in your page
 library.add(darkMode, lightMode);
 
-export const DarkModeIcon = () => {
+const ModeIcon = ({ mode }) => {
+  const icon = mode === 'light' ? lightMode : darkMode;
   return (
-    <>
-      <FontAwesomeIcon icon={darkMode} />
-      <h4>Dark Mode</h4>
-    </>
+    <ModeDiv>
+      <FontAwesomeIcon icon={icon} />
+      <StyledH4>
+        {mode.charAt(0).toUpperCase() + mode.slice(1) + ' Mode'}
+      </StyledH4>
+    </ModeDiv>
   );
 };
-export const LightModeIcon = () => {
-  return (
-    <>
-      <FontAwesomeIcon icon={lightMode} />
-      <h4>Light Mode</h4>
-    </>
-  );
-};
+
+export default ModeIcon;
