@@ -7,7 +7,8 @@ import FilterComponent from './components/Filter/Filter.component';
 class App extends React.Component {
   state = {
     isDarkMode: false,
-    searchFilter: ''
+    searchFilter: '',
+    filteredRegion: ''
   };
 
   toggleMode = () => {
@@ -17,15 +18,23 @@ class App extends React.Component {
   updateSearchFilter = e => {
     this.setState({ searchFilter: e.target.value });
   };
+
+  updateFilteredRegion = filteredRegion => {
+    this.setState({ filteredRegion });
+  };
   render() {
-    const { isDarkMode } = this.state;
-    const { toggleMode, updateSearchFilter } = this;
+    const { isDarkMode, filteredRegion } = this.state;
+    const { toggleMode, updateSearchFilter, updateFilteredRegion } = this;
 
     return (
       <GlobalStyles>
         <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
         <MainContainer>
-          <FilterComponent updateSearchFilter={updateSearchFilter} />
+          <FilterComponent
+            updateSearchFilter={updateSearchFilter}
+            filteredRegion={filteredRegion}
+            updateFilteredRegion={updateFilteredRegion}
+          />
         </MainContainer>
       </GlobalStyles>
     );

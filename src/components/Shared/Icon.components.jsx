@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faMoon as lightMode,
-  faSearch
+  faSearch,
+  faChevronDown
 } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as darkMode } from '@fortawesome/free-regular-svg-icons';
 
-library.add(darkMode, lightMode);
+library.add(darkMode, lightMode, faSearch, faChevronDown);
 
 export const ModeIcon = ({ isDarkMode, toggleMode }) => {
   const icon = isDarkMode ? lightMode : darkMode;
@@ -25,6 +26,14 @@ export const SearchIcon = () => {
   return (
     <div>
       <FontAwesomeIcon icon={faSearch} />
+    </div>
+  );
+};
+
+export const ChevronDown = () => {
+  return (
+    <div>
+      <FontAwesomeIcon icon={faChevronDown} />
     </div>
   );
 };
