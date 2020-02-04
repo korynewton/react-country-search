@@ -5,7 +5,7 @@ import {
   SearchIconDiv
 } from '../../styles/Main/Filter/TextFilter.styles';
 import { SearchIcon } from './../Shared/Icon.components';
-const TextFilter = () => {
+const TextFilter = ({ updateSearchFilter }) => {
   return (
     <TextFilterContainer>
       <SearchIconDiv>
@@ -16,6 +16,7 @@ const TextFilter = () => {
         name="name"
         id="name"
         placeholder="Search for a country..."
+        onChange={e => updateSearchFilter(e)}
       />
     </TextFilterContainer>
   );

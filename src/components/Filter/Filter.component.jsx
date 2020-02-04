@@ -3,10 +3,10 @@ import TextFilter from './TextFilter.component';
 import RegionFilter from './RegionFilter.component';
 import FilterContainer from '../../styles/Main/Filter/FilterContainer.styles';
 
-export const FilterComponent = () => {
+export const FilterComponent = ({ updateSearchFilter }) => {
   return (
     <FilterContainer>
-      <TextFilter />
+      <TextFilter updateSearchFilter={updateSearchFilter} />
       <RegionFilter />
     </FilterContainer>
   );
