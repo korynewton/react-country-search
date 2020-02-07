@@ -10,7 +10,6 @@ export const FilterTextInput = styled.input`
   cursor: text;
   border: none;
   background: white;
-  color: lightgray;
 `;
 
 export const TextFilterContainer = styled.div`
