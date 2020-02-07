@@ -38,7 +38,20 @@ class App extends React.Component {
   };
 
   updateFilteredRegion = filteredRegion => {
-    this.setState({ filteredRegion });
+    const { countries, filteredCountries } = this.state;
+    let filtered;
+    if (filteredCountries.length) {
+      filtered = filteredCountries.filter(country => {
+        if (country.region === filteredRegion) return true;
+        return false;
+      });
+    } else {
+      filtered = countries.filter(country => {
+        if (country.region === filteredRegion) return true;
+        return false;
+      });
+    }
+    this.setState({ filteredCountries: filtered, filteredRegion });
   };
 
   filterCountries = () => {
