@@ -26,6 +26,20 @@ export const FlagContainer = styled.div`
   height: 325px;
 `;
 export const HomeCountryName = styled.h3`
-  font-size: 2rem;
+  font-size: 2.9rem;
   font-weight: ${fontWeightHeavy};
+`;
+
+export const HomeCountryDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2.5rem;
+
+  & h4 {
+    font-weight: ${fontWeightMedium};
+  }
+  & span {
+    font-weight: ${fontWeightLight};
+  }
 `;
