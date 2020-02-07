@@ -8,8 +8,8 @@ export const darkBlue = 'hsl(209, 23%, 22%);';
 
 // font details
 export const nunitoSansFont = '"Nunito Sans", sans-serif;';
-export const detailPageFontSize = '16px;';
-export const homePageFontSize = '14px;';
+export const detailPageFontSize = '1.6rem;';
+export const homePageFontSize = '1.4rem;';
 export const fontWeightLight = '300;';
 export const fontWeightMedium = '600;';
 export const fontWeightHeavy = '800;';
