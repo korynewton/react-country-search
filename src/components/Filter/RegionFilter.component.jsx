@@ -32,8 +32,8 @@ const RegionFilter = ({ filteredRegion, updateFilteredRegion }) => {
           <h3 onClick={e => updateselectedRegion(e)} id="Africa">
             Africa
           </h3>
-          <h3 onClick={e => updateselectedRegion(e)} id="America">
-            America
+          <h3 onClick={e => updateselectedRegion(e)} id="Americas">
+            Americas
           </h3>
           <h3 onClick={e => updateselectedRegion(e)} id="Asia">
             Asia
