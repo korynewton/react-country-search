@@ -5,8 +5,8 @@ export const StyledDropdown = styled.div`
   font-family: ${nunitoSansFont};
   font-size: 2rem;
   font-weight: ${fontWeightLight};
-  width: 61%;
-  margin-top: 6.5rem;
+  width: 58%;
+  margin-top: 8rem;
 `;
 
 export const TopItem = styled.div`
@@ -15,8 +15,8 @@ export const TopItem = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.5rem;
-  height: 5.5rem;
+  font-size: 2.5rem;
+  height: 10rem;
   box-shadow: ${boxShadow};
   border-radius: 0.5rem;
 `;
@@ -29,12 +29,11 @@ export const DropdownContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3rem;
-
-  height: 12.5rem;
+  padding: 3.5rem;
+  height: 23rem;
 
   & h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     cursor: pointer;
   }
 `;

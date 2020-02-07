@@ -3,14 +3,14 @@ import { boxShadow } from '../../variables';
 
 export const FilterTextInput = styled.input`
   width: 100%;
-  height: 30px;
   width: 65%;
-  font-size: 1.5rem;
-  height: 4rem;
-  margin-left: 1.2rem;
+  font-size: 2.5rem;
+  height: 10rem;
+  margin-left: 4.5rem;
   cursor: text;
   border: none;
   background: white;
+  color: lightgray;
 `;
 
 export const TextFilterContainer = styled.div`
@@ -22,8 +22,8 @@ export const TextFilterContainer = styled.div`
 `;
 
 export const SearchIconDiv = styled.div`
-  font-size: 1.8rem;
+  font-size: 3rem;
   color: darkgray;
   padding: 0px 2rem;
-  margin-left: 2rem;
+  margin-left: 3.5rem;
 `;
