@@ -5,7 +5,7 @@ const CountriesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid red;
-  margin-top: 4.5rem;
+  margin-top: 5.5rem;
 `;
 
 export default CountriesContainer;
