@@ -7,12 +7,13 @@ import {
 } from '../variables';
 
 export const HomeCountryContainer = styled.div`
-  width: 62%;
+  width: 70%;
   box-shadow: ${boxShadow};
   border-radius: 0.5rem;
   overflow: hidden;
   height: 670px;
-  border: 1px solid black;
+  max-width: 60rem;
+  margin-bottom: 9rem;
 `;
 
 export const HomeCountryFlag = styled.img`
@@ -26,8 +27,10 @@ export const FlagContainer = styled.div`
   height: 325px;
 `;
 export const HomeCountryName = styled.h3`
-  font-size: 2.9rem;
+  font-size: 3rem;
   font-weight: ${fontWeightHeavy};
+  padding-left: 4.6rem;
+  margin-top: 6rem;
 `;
 
 export const HomeCountryDetails = styled.div`
@@ -35,6 +38,9 @@ export const HomeCountryDetails = styled.div`
   flex-direction: column;
   justify-content: space-around;
   font-size: 2.5rem;
+  margin-top: 3rem;
+  padding-left: 4.6rem;
+  height: 16rem;
 
   & h4 {
     font-weight: ${fontWeightMedium};
