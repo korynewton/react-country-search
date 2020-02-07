@@ -41,8 +41,8 @@ const RegionFilter = ({ filteredRegion, updateFilteredRegion }) => {
           <h3 onClick={e => updateselectedRegion(e)} id="Europe">
             Europe
           </h3>
-          <h3 onClick={e => updateselectedRegion(e)} id="Oceana">
-            Oceana
+          <h3 onClick={e => updateselectedRegion(e)} id="Oceania">
+            Oceania
           </h3>
         </DropdownContent>
       ) : null}
