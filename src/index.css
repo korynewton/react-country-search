@@ -129,8 +129,8 @@ table {
 }
 
 /*  */
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  background: hsl(0, 0%, 98%);
 }
