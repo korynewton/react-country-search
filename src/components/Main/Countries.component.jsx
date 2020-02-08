@@ -1,5 +1,5 @@
 import React from 'react';
-import CountriesContainer from '../styles/Main/CountriesContainer.styles';
+import CountriesContainer from '../../styles/Main/CountriesContainer.styles';
 import Country from './Country.component';
 const CountriesComponent = ({ countries }) => {
   return (

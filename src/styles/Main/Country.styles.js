@@ -14,6 +14,7 @@ export const HomeCountryContainer = styled.div`
   height: 670px;
   max-width: 60rem;
   margin-bottom: 9rem;
+  cursor: pointer;
 `;
 
 export const HomeCountryFlag = styled.img`

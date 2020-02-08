@@ -5,7 +5,7 @@ import {
   HomeCountryFlag,
   HomeCountryDetails,
   FlagContainer
-} from '../styles/Main/Country.styles';
+} from '../../styles/Main/Country.styles';
 
 const Country = ({ country }) => {
   const { name, region, population, flag, capital } = country;
