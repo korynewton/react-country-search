@@ -8,7 +8,8 @@ import MainContainer from './styles/Main/mainContainer.styles';
 import FilterComponent from './components/Filter/Filter.component';
 import CountriesComponent from './components/Main/Countries.component';
 import DetailsComponent from './components/Details/Details.component';
-
+import BorderCountriesComponent from './components/Details/BorderCountries.component';
+import { DetailsContainer } from './styles/Main/Details/Details.styles';
 // temporary so I dont have to keep fetching 250 countries
 import api_data from './api.json';
 
@@ -104,8 +105,21 @@ class App extends React.Component {
               const countryDetails = countries.find(
                 ({ name }) => name === match.params.countryName
               );
+
+              const borderCountries = countries.filter(country => {
+                if (countryDetails.borders.includes(country.alpha3Code))
+                  return true;
+                return false;
+              });
+
               return (
-                <DetailsComponent countryDetails={countryDetails} {...rest} />
+                <DetailsContainer>
+                  <DetailsComponent countryDetails={countryDetails} {...rest} />
+                  <BorderCountriesComponent
+                    borderCountries={borderCountries}
+                    {...rest}
+                  />
+                </DetailsContainer>
               );
             }}
           />
