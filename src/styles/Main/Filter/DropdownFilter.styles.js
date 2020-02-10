@@ -13,6 +13,10 @@ export const StyledDropdown = styled.div`
   font-weight: ${fontWeightLight};
   width: 58%;
   margin-top: 8rem;
+  @media (min-width: 1000px) {
+    width: 16%;
+    margin-top: 0;
+  }
 `;
 
 export const TopItem = styled.div`
@@ -26,6 +30,10 @@ export const TopItem = styled.div`
   color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
   background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
   box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+    height: 6.5rem;
+  }
 `;
 
 export const DropdownContent = styled.div`
@@ -38,9 +46,17 @@ export const DropdownContent = styled.div`
   justify-content: space-between;
   padding: 3.5rem;
   height: 23rem;
+  @media (min-width: 1000px) {
+    margin-top: 0.5rem;
+    height: 10rem;
+    padding: 2rem 3rem;
+  }
 
   & h3 {
     font-size: 3rem;
     cursor: pointer;
+    @media (min-width: 1000px) {
+      font-size: 1.5rem;
+    }
   }
 `;

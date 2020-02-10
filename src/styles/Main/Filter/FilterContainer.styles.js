@@ -8,6 +8,11 @@ const FilterContainer = styled.div`
     max-width: 91%;
     margin: 0 auto;
     height: 29rem;
+    @media (min-width: 1000px) {
+        flex-direction:row;
+        max-width:89%;
+        justify-content:space-between;
+      }
 `;
 
 export default FilterContainer;
