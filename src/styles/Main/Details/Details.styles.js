@@ -64,6 +64,9 @@ export const BorderCountriesContainer = styled.div`
   margin-top: 8rem;
   font-size: 3rem;
   font-weight: ${fontWeightMedium};
+  & span {
+    font-weight: ${fontWeightLight};
+  }
 `;
 
 export const DetailBorderCountries = styled.div`

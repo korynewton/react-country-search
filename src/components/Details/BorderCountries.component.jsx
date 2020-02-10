@@ -11,7 +11,10 @@ const BorderCountriesComponent = ({ borderCountries, history }) => {
   };
   return (
     <BorderCountriesContainer>
-      <h4>Border Countries:</h4>
+      <h4>
+        Border Countries:{' '}
+        {borderCountries.length === 0 ? <span>None</span> : null}
+      </h4>
       <DetailBorderCountries>
         {borderCountries.map(country => (
           <DetailBorderCountry
