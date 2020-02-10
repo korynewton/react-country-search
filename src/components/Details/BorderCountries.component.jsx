@@ -6,8 +6,8 @@ import {
 } from '../../styles/Main/Details/Details.styles';
 
 const BorderCountriesComponent = ({ borderCountries, history }) => {
-  const navigateToBorderCountry = name => {
-    history.push(name);
+  const navigateToBorderCountry = code => {
+    history.push(code);
   };
   return (
     <BorderCountriesContainer>
@@ -15,7 +15,7 @@ const BorderCountriesComponent = ({ borderCountries, history }) => {
       <DetailBorderCountries>
         {borderCountries.map(country => (
           <DetailBorderCountry
-            onClick={() => navigateToBorderCountry(country.name)}
+            onClick={() => navigateToBorderCountry(country.alpha3Code)}
           >
             <h5>{country.name.replace(/ *\([^)]*\) */g, '')}</h5>
           </DetailBorderCountry>

@@ -100,10 +100,10 @@ class App extends React.Component {
             />
           </Route>
           <Route
-            path="/country/:countryName"
+            path="/country/:countryCode"
             render={({ match, ...rest }) => {
               const countryDetails = countries.find(
-                ({ name }) => name === match.params.countryName
+                ({ alpha3Code }) => alpha3Code === match.params.countryCode
               );
 
               const borderCountries = countries.filter(country => {
