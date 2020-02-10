@@ -4,14 +4,27 @@ import { DetailsContainer } from '../styles/Main/Details/Details.styles';
 import DetailsComponent from '../components/Details/Details.component';
 import BorderCountriesComponent from '../components/Details/BorderCountries.component';
 
-const DetailsPage = ({ countryDetails, borderCountries, ...rest }) => {
+const DetailsPage = ({
+  countryDetails,
+  borderCountries,
+  isDarkMode,
+  ...rest
+}) => {
   useEffect(() => window.scrollTo(0, 0));
 
   return (
     <>
       <DetailsContainer>
-        <DetailsComponent countryDetails={countryDetails} {...rest} />
-        <BorderCountriesComponent borderCountries={borderCountries} {...rest} />
+        <DetailsComponent
+          countryDetails={countryDetails}
+          isDarkMode={isDarkMode}
+          {...rest}
+        />
+        <BorderCountriesComponent
+          borderCountries={borderCountries}
+          isDarkMode={isDarkMode}
+          {...rest}
+        />
       </DetailsContainer>
     </>
   );

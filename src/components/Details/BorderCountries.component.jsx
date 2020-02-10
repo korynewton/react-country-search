@@ -5,12 +5,12 @@ import {
   DetailBorderCountries
 } from '../../styles/Main/Details/Details.styles';
 
-const BorderCountriesComponent = ({ borderCountries, history }) => {
+const BorderCountriesComponent = ({ borderCountries, history, isDarkMode }) => {
   const navigateToBorderCountry = code => {
     history.push(code);
   };
   return (
-    <BorderCountriesContainer>
+    <BorderCountriesContainer isDarkMode={isDarkMode}>
       <h4>
         Border Countries:{' '}
         {borderCountries.length === 0 ? <span>None</span> : null}
@@ -18,6 +18,7 @@ const BorderCountriesComponent = ({ borderCountries, history }) => {
       <DetailBorderCountries>
         {borderCountries.map(country => (
           <DetailBorderCountry
+            isDarkMode={isDarkMode}
             onClick={() => navigateToBorderCountry(country.alpha3Code)}
           >
             <h5>{country.name.replace(/ *\([^)]*\) */g, '')}</h5>

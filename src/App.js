@@ -120,6 +120,7 @@ class App extends React.Component {
                 <DetailsPage
                   countryDetails={countryDetails}
                   borderCountries={borderCountries}
+                  isDarkMode={isDarkMode}
                   {...rest}
                 />
               );

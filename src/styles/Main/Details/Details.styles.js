@@ -3,7 +3,9 @@ import {
   fontWeightLight,
   fontWeightHeavy,
   fontWeightMedium,
-  boxShadow
+  handleBoxShadowFromMode,
+  handleColorFromMode,
+  darkBlue
 } from '../../variables';
 
 export const DetailsContainer = styled.div`
@@ -22,7 +24,7 @@ export const BackButtonContainer = styled.div`
   margin-top: 8rem;
   background: white;
   border-radius: 0.5rem;
-  box-shadow: ${boxShadow};
+  box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
   cursor: pointer;
 
   font-weight: ${fontWeightLight};
@@ -40,6 +42,7 @@ export const DetailDetails = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10rem;
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
 
   & h2 {
     font-weight: ${fontWeightHeavy};
@@ -58,9 +61,11 @@ export const DetailDetails = styled.div`
 
 export const DetailSubdetails = styled(DetailDetails)`
   margin-top: 8rem;
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
 `;
 
 export const BorderCountriesContainer = styled.div`
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
   margin-top: 8rem;
   font-size: 3rem;
   font-weight: ${fontWeightMedium};
@@ -76,13 +81,14 @@ export const DetailBorderCountries = styled.div`
   width: 100%:
   border: 1px solid red;
   width: 100%;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  padding-bottom:2rem;
 `;
 
 export const DetailBorderCountry = styled.div`
   cursor: pointer;
-  box-shadow: ${boxShadow};
-  background: white;
+  box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
+  background: ${({ isDarkMode }) => (isDarkMode ? darkBlue : 'white')};
   width: 30%;
   height: 5.5rem;
   border-radius: 0.5rem;

@@ -6,7 +6,7 @@ import {
 } from '../../styles/Main/Details/Details.styles';
 import BackButtonComponent from './BackButton.component';
 
-const DetailsComponent = ({ countryDetails, history }) => {
+const DetailsComponent = ({ countryDetails, history, isDarkMode }) => {
   const {
     flag,
     population,
@@ -21,10 +21,10 @@ const DetailsComponent = ({ countryDetails, history }) => {
   } = countryDetails;
   return (
     <>
-      <BackButtonComponent history={history} />
+      <BackButtonComponent history={history} isDarkMode={isDarkMode} />
       <DetailFlag src={flag} />
 
-      <DetailDetails>
+      <DetailDetails isDarkMode={isDarkMode}>
         <h2>{name}</h2>
         <h3>
           Native Name:
@@ -47,7 +47,7 @@ const DetailsComponent = ({ countryDetails, history }) => {
           <span> {capital}</span>
         </h3>
       </DetailDetails>
-      <DetailSubdetails>
+      <DetailSubdetails isDarkMode={isDarkMode}>
         <h3>
           Top Level Domain:
           <span> {topLevelDomain.join(', ')}</span>
