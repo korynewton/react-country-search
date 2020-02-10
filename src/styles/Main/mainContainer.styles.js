@@ -5,7 +5,7 @@ const MainContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   background: ${veryLightGrayBackground};
-  margin-top: 4rem;
+  padding-top: 4rem;
 `;
 
 export default MainContainer;

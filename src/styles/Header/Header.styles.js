@@ -29,4 +29,5 @@ export const ModeDiv = styled.div`
 export const HeaderContainer = styled.div`
   width: 100%;
   box-shadow: ${boxShadow};
+  background: white;
 `;
