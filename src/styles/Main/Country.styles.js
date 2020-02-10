@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import {
-  boxShadow,
   fontWeightHeavy,
   fontWeightMedium,
-  fontWeightLight
+  fontWeightLight,
+  handleBackgroundFromMode,
+  handleColorFromMode,
+  handleBoxShadowFromMode
 } from '../variables';
 
 export const HomeCountryContainer = styled.div`
   width: 70%;
-  box-shadow: ${boxShadow};
+  box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
+  background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
   border-radius: 0.5rem;
   overflow: hidden;
   height: 670px;

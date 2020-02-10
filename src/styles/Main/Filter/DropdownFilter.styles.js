@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {
   nunitoSansFont,
   fontWeightLight,
-  boxShadow,
   handleColorFromMode,
   handleBackgroundFromMode,
   handleBoxShadowFromMode

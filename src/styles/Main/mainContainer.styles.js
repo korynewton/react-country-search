@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { veryLightGrayBackground, veryDarkBlueBackground } from '../variables';
+import { veryDarkBlueBackground, veryLightGrayBackground } from '../variables';
 
 const MainContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   background: ${({ isDarkMode }) =>
-    isDarkMode ? veryDarkBlueBackground : 'white'};
+    isDarkMode ? veryDarkBlueBackground : veryLightGrayBackground};
   padding-top: 4rem;
 `;
 
