@@ -7,10 +7,15 @@ import {
   FlagContainer
 } from '../../styles/Main/Country.styles';
 
-const Country = ({ country }) => {
-  const { name, region, population, flag, capital } = country;
+const Country = ({ country, history }) => {
+  const { name, region, population, flag, capital, alpha3Code } = country;
+
+  const navigateToDetails = () => {
+    history.push(`/country/${alpha3Code}`);
+  };
+
   return (
-    <HomeCountryContainer>
+    <HomeCountryContainer onClick={navigateToDetails}>
       <FlagContainer>
         <HomeCountryFlag src={flag} />
       </FlagContainer>

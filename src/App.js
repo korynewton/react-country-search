@@ -5,11 +5,9 @@ import { Route } from 'react-router-dom';
 import Header from './components/Header/HeaderComponent';
 import { GlobalStyles } from './App.styles';
 import MainContainer from './styles/Main/mainContainer.styles';
-import FilterComponent from './components/Filter/Filter.component';
-import CountriesComponent from './components/Main/Countries.component';
-import DetailsComponent from './components/Details/Details.component';
-import BorderCountriesComponent from './components/Details/BorderCountries.component';
-import { DetailsContainer } from './styles/Main/Details/Details.styles';
+import HomePage from './pages/HomePage';
+import DetailsPage from './pages/DetailsPage';
+
 // temporary so I dont have to keep fetching 250 countries
 import api_data from './api.json';
 
@@ -87,18 +85,23 @@ class App extends React.Component {
       <GlobalStyles>
         <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
         <MainContainer>
-          <Route exact path="/">
-            <FilterComponent
-              updateSearchFilter={updateSearchFilter}
-              filteredRegion={filteredRegion}
-              updateFilteredRegion={updateFilteredRegion}
-            />
-            <CountriesComponent
-              countries={
-                filteredCountries.length ? filteredCountries : countries
-              }
-            />
-          </Route>
+          <Route
+            exact
+            path="/"
+            render={({ history }) => {
+              return (
+                <HomePage
+                  filteredCountries={filteredCountries}
+                  countries={countries}
+                  updateSearchFilter={updateSearchFilter}
+                  filteredRegion={filteredRegion}
+                  updateFilteredRegion={updateFilteredRegion}
+                  history={history}
+                />
+              );
+            }}
+          />
+
           <Route
             path="/country/:countryCode"
             render={({ match, ...rest }) => {
@@ -113,13 +116,11 @@ class App extends React.Component {
               });
 
               return (
-                <DetailsContainer>
-                  <DetailsComponent countryDetails={countryDetails} {...rest} />
-                  <BorderCountriesComponent
-                    borderCountries={borderCountries}
-                    {...rest}
-                  />
-                </DetailsContainer>
+                <DetailsPage
+                  countryDetails={countryDetails}
+                  borderCountries={borderCountries}
+                  {...rest}
+                />
               );
             }}
           />
