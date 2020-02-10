@@ -9,9 +9,16 @@ import {
 export const StyledH2 = styled.h2`
   font-size: 2.7rem;
   font-weight: ${fontWeightHeavy};
+  @media (min-width: 1000px) {
+    font-size: 2.5rem;
+  }
 `;
 
-export const StyledH4 = styled.h4``;
+export const StyledH4 = styled.h4`
+  @media (min-width: 1000px) {
+    margin-left: 1rem;
+  }
+`;
 
 export const StyledHeaderDiv = styled.div`
   display: flex;
@@ -21,6 +28,10 @@ export const StyledHeaderDiv = styled.div`
   max-width: 91%;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: 1000px) {
+    height: 8rem;
+    max-width: 89%;
+  }
 `;
 
 export const ModeDiv = styled.div`
@@ -29,6 +40,10 @@ export const ModeDiv = styled.div`
   justify-content: space-between;
   width: 24%;
   cursor: pointer;
+  @media (min-width: 1000px) {
+    justify-content: flex-end;
+    font-size: 1.5rem;
+  }
 `;
 
 export const HeaderContainer = styled.div`
