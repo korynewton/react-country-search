@@ -8,7 +8,7 @@ import {
 
 const Header = ({ isDarkMode, toggleMode }) => {
   return (
-    <HeaderContainer>
+    <HeaderContainer isDarkMode={isDarkMode}>
       <StyledHeaderDiv>
         <StyledH2>Where in the world?</StyledH2>
         <ModeIcon isDarkMode={isDarkMode} toggleMode={toggleMode} />

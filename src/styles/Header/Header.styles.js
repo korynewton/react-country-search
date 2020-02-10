@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { fontWeightHeavy, boxShadow } from '../../styles/variables';
+import {
+  fontWeightHeavy,
+  boxShadow,
+  darkBlue,
+  veryDarkBlueText
+} from '../../styles/variables';
 
 export const StyledH2 = styled.h2`
   font-size: 2.7rem;
@@ -29,5 +34,6 @@ export const ModeDiv = styled.div`
 export const HeaderContainer = styled.div`
   width: 100%;
   box-shadow: ${boxShadow};
-  background: white;
+  background: ${({ isDarkMode }) => (isDarkMode ? darkBlue : 'white')};
+  color: ${({ isDarkMode }) => (isDarkMode ? 'white' : veryDarkBlueText)};
 `;
