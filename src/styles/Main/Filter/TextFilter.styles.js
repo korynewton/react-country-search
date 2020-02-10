@@ -1,5 +1,12 @@
 import styled from 'styled-components';
-import { boxShadow } from '../../variables';
+import {
+  boxShadow,
+  darkBlue,
+  veryDarkBlueText,
+  handleColorFromMode,
+  handleBackgroundFromMode,
+  handleBoxShadowFromMode
+} from '../../variables';
 
 export const FilterTextInput = styled.input`
   width: 100%;
@@ -9,20 +16,25 @@ export const FilterTextInput = styled.input`
   margin-left: 4.5rem;
   cursor: text;
   border: none;
-  background: white;
+  background: inherit;
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
+  &::placeholder {
+    color: ${({ isDarkMode }) => (isDarkMode ? 'white' : 'lightgray')};
+  }
 `;
 
 export const TextFilterContainer = styled.div`
   display: flex;
   justify-content: align-start;
   align-items: center;
-  background: white;
-  box-shadow: ${boxShadow};
+  background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
+  box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
 `;
 
 export const SearchIconDiv = styled.div`
   font-size: 3rem;
-  color: darkgray;
   padding: 0px 2rem;
   margin-left: 3.5rem;
+  color: ${({ isDarkMode }) => (isDarkMode ? 'white' : 'lightgray')};
 `;

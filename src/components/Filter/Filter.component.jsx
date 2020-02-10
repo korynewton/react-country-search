@@ -6,12 +6,17 @@ import FilterContainer from '../../styles/Main/Filter/FilterContainer.styles';
 export const FilterComponent = ({
   updateSearchFilter,
   filteredRegion,
-  updateFilteredRegion
+  updateFilteredRegion,
+  isDarkMode
 }) => {
   return (
     <FilterContainer>
-      <TextFilter updateSearchFilter={updateSearchFilter} />
+      <TextFilter
+        isDarkMode={isDarkMode}
+        updateSearchFilter={updateSearchFilter}
+      />
       <RegionFilter
+        isDarkMode={isDarkMode}
         filteredRegion={filteredRegion}
         updateFilteredRegion={updateFilteredRegion}
       />

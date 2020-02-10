@@ -1,5 +1,12 @@
 import styled from 'styled-components';
-import { nunitoSansFont, fontWeightLight, boxShadow } from '../../variables';
+import {
+  nunitoSansFont,
+  fontWeightLight,
+  boxShadow,
+  handleColorFromMode,
+  handleBackgroundFromMode,
+  handleBoxShadowFromMode
+} from '../../variables';
 
 export const StyledDropdown = styled.div`
   font-family: ${nunitoSansFont};
@@ -11,20 +18,21 @@ export const StyledDropdown = styled.div`
 
 export const TopItem = styled.div`
   cursor: pointer;
-  background: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 2.5rem;
   height: 10rem;
-  box-shadow: ${boxShadow};
   border-radius: 0.5rem;
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
+  background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
+  box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
 `;
 
 export const DropdownContent = styled.div`
-  margin-top: 0.5rem;
-  background: white;
-  box-shadow: ${boxShadow};
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
+  background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
+  margin-top: 1rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;

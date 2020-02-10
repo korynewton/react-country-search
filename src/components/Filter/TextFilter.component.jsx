@@ -5,9 +5,9 @@ import {
   SearchIconDiv
 } from '../../styles/Main/Filter/TextFilter.styles';
 import { SearchIcon } from './../Shared/Icon.components';
-const TextFilter = ({ updateSearchFilter }) => {
+const TextFilter = ({ updateSearchFilter, isDarkMode }) => {
   return (
-    <TextFilterContainer>
+    <TextFilterContainer isDarkMode={isDarkMode}>
       <SearchIconDiv>
         <SearchIcon />
       </SearchIconDiv>
@@ -17,6 +17,7 @@ const TextFilter = ({ updateSearchFilter }) => {
         id="name"
         placeholder="Search for a country..."
         onChange={e => updateSearchFilter(e)}
+        isDarkMode={isDarkMode}
       />
     </TextFilterContainer>
   );

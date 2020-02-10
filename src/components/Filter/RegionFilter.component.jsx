@@ -6,7 +6,7 @@ import {
 } from '../../styles/Main/Filter/DropdownFilter.styles';
 import { ChevronDown } from './../Shared/Icon.components';
 
-const RegionFilter = ({ filteredRegion, updateFilteredRegion }) => {
+const RegionFilter = ({ filteredRegion, updateFilteredRegion, isDarkMode }) => {
   const [active, setActive] = useState(false);
   const [selectedRegion, setselectedRegion] = useState(filteredRegion);
 
@@ -22,13 +22,13 @@ const RegionFilter = ({ filteredRegion, updateFilteredRegion }) => {
   };
 
   return (
-    <StyledDropdown>
-      <TopItem onClick={toggleActive}>
+    <StyledDropdown isDarkMode={isDarkMode}>
+      <TopItem onClick={toggleActive} isDarkMode={isDarkMode}>
         {selectedRegion ? <h4>{selectedRegion}</h4> : <h4>Filter by Region</h4>}
         <ChevronDown />
       </TopItem>
       {active ? (
-        <DropdownContent>
+        <DropdownContent isDarkMode={isDarkMode}>
           <h3 onClick={e => updateselectedRegion(e)} id="Africa">
             Africa
           </h3>

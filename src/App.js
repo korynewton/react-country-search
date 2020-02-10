@@ -84,7 +84,7 @@ class App extends React.Component {
     return (
       <GlobalStyles>
         <Header isDarkMode={isDarkMode} toggleMode={toggleMode} />
-        <MainContainer>
+        <MainContainer isDarkMode={isDarkMode}>
           <Route
             exact
             path="/"
@@ -97,6 +97,7 @@ class App extends React.Component {
                   filteredRegion={filteredRegion}
                   updateFilteredRegion={updateFilteredRegion}
                   history={history}
+                  isDarkMode={isDarkMode}
                 />
               );
             }}

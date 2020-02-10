@@ -15,3 +15,13 @@ export const fontWeightMedium = '600;';
 export const fontWeightHeavy = '800;';
 
 export const boxShadow = '0px 4px 17px 0px lightgrey;';
+
+// dark mode
+export const handleColorFromMode = isDarkMode =>
+  isDarkMode ? 'white' : veryDarkBlueText;
+
+export const handleBackgroundFromMode = isDarkMode =>
+  isDarkMode ? darkBlue : 'white';
+
+export const handleBoxShadowFromMode = isDarkMode =>
+  isDarkMode ? '0px 4px 17px 0px black;' : '0px 4px 17px 0px lightgrey;';
