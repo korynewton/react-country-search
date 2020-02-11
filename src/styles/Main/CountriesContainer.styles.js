@@ -10,7 +10,7 @@ const CountriesContainer = styled.div`
 
   @media (min-width:1000px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 2rem;
     max-width:89%;
