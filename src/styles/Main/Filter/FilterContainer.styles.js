@@ -12,6 +12,8 @@ const FilterContainer = styled.div`
         flex-direction:row;
         max-width:89%;
         justify-content:space-between;
+        height: unset;
+        margin-bottom: 4rem;
       }
 `;
 
