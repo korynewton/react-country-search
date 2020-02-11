@@ -8,24 +8,58 @@ import {
   darkBlue
 } from '../../variables';
 
-export const DetailsContainer = styled.div`
+export const DetailsPageContainer = styled.div`
+  border: 1px solid green;
+  margin: 0 auto;
   max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  @media (min-width: 1000px) {
+    max-width: 89%;
+  }
+`;
+
+export const DetailsContainer = styled.div`
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+export const DetailsComponentContainer = styled.div`
+  & h2 {
+    margin-top: 14rem;
+    font-size: 3.5rem;
+    font-weight: ${fontWeightHeavy};
+  }
+`;
+
+export const DetailsTextContainer = styled.div`
+  border: 1px solid red;
+  @media (min-width: 1000px) {
+    display: flex;
+  }
 `;
 
 export const BackButtonContainer = styled.div`
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.8rem;
   height: 6rem;
   width: 20.5rem;
-  margin-top: 8rem;
   background: white;
   border-radius: 0.5rem;
   box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
   cursor: pointer;
+
+  @media (min-width: 1000px) {
+    font-size: 1.7rem;
+    height: 4rem;
+    width: 14rem;
+  }
 
   font-weight: ${fontWeightLight};
   & h4 {
@@ -34,14 +68,22 @@ export const BackButtonContainer = styled.div`
 `;
 
 export const DetailFlag = styled.img`
-  width: 100%;
   margin-top: 13rem;
+  width: 100%;
+  @media (min-width: 1000px) {
+    margin-top: 8rem;
+    width: 50%;
+    height: 100%;
+  }
 `;
 
 export const DetailDetails = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 6rem;
+
+  @media (min-width: 1000px) {
+  }
   color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
 
   & h2 {
