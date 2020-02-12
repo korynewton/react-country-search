@@ -15,7 +15,10 @@ const DetailsPage = ({ countryDetails, isDarkMode, history, ...rest }) => {
     <DetailsPageContainer>
       <BackButtonComponent isDarkMode={isDarkMode} history={history} />
       <DetailsContainer>
-        <DetailFlag src={countryDetails.flag} />
+        <DetailFlag
+          src={countryDetails.flag}
+          alt={'Flag of ' + countryDetails.name}
+        />
         <DetailsComponent
           countryDetails={countryDetails}
           isDarkMode={isDarkMode}

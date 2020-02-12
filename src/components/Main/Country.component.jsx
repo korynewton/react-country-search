@@ -17,7 +17,7 @@ const Country = ({ country, history, isDarkMode }) => {
   return (
     <HomeCountryContainer onClick={navigateToDetails} isDarkMode={isDarkMode}>
       <FlagContainer>
-        <HomeCountryFlag src={flag} />
+        <HomeCountryFlag src={flag} alt={'Flag of ' + name} />
       </FlagContainer>
       <HomeCountryName>{name}</HomeCountryName>
       <HomeCountryDetails>
