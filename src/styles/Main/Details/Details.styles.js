@@ -166,6 +166,7 @@ export const DetailBorderCountry = styled.div`
   justify-content: center;
   align-items: center;
   & h5 {
+    text-align: center;
     font-size: 2rem;
     font-weight: ${fontWeightLight};
     @media (min-width: 1000px) {
