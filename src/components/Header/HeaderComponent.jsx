@@ -7,10 +7,11 @@ import {
 } from '../../styles/Header/Header.styles';
 
 const Header = ({ isDarkMode, toggleMode }) => {
+  const navigateHome = () => (window.location.href = '/');
   return (
     <HeaderContainer isDarkMode={isDarkMode}>
       <StyledHeaderDiv>
-        <StyledH2>Where in the world?</StyledH2>
+        <StyledH2 onClick={navigateHome}>Where in the world?</StyledH2>
         <ModeIcon isDarkMode={isDarkMode} toggleMode={toggleMode} />
       </StyledHeaderDiv>
     </HeaderContainer>

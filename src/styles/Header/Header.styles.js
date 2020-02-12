@@ -8,6 +8,7 @@ import {
 
 export const StyledH2 = styled.h2`
   font-size: 2.7rem;
+  cursor: pointer;
   font-weight: ${fontWeightHeavy};
   @media (min-width: 1000px) {
     font-size: 2.5rem;
