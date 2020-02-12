@@ -35,7 +35,7 @@ const DetailsComponent = ({
           </h3>
           <h3>
             Popultation:
-            <span> {population.toLocaleString()}x</span>
+            <span> {population.toLocaleString()}</span>
           </h3>
           <h3>
             Region:

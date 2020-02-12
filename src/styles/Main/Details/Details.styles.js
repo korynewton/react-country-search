@@ -9,7 +9,6 @@ import {
 } from '../../variables';
 
 export const DetailsPageContainer = styled.div`
-  border: 1px solid green;
   margin: 0 auto;
   max-width: 85%;
   @media (min-width: 1000px) {
@@ -18,12 +17,12 @@ export const DetailsPageContainer = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   @media (min-width: 1000px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
@@ -32,13 +31,21 @@ export const DetailsComponentContainer = styled.div`
     margin-top: 14rem;
     font-size: 3.5rem;
     font-weight: ${fontWeightHeavy};
+
+    @media (min-width: 1000px) {
+      margin-top: 12rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    width: 47%;
   }
 `;
 
 export const DetailsTextContainer = styled.div`
-  border: 1px solid red;
   @media (min-width: 1000px) {
     display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -71,8 +78,8 @@ export const DetailFlag = styled.img`
   margin-top: 13rem;
   width: 100%;
   @media (min-width: 1000px) {
+    max-width: 560px;
     margin-top: 8rem;
-    width: 50%;
     height: 100%;
   }
 `;
@@ -83,6 +90,7 @@ export const DetailDetails = styled.div`
   margin-top: 6rem;
 
   @media (min-width: 1000px) {
+    margin-top: 3rem;
   }
   color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
 
@@ -94,10 +102,19 @@ export const DetailDetails = styled.div`
   & h3 {
     margin-bottom: 3rem;
     font-size: 3rem;
+    font-weight: ${fontWeightMedium} @media (min-width: 1000px) {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
   }
   & span {
     font-weight: ${fontWeightLight};
     font-size: 3rem;
+    @media (min-width: 1000px) {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -114,6 +131,11 @@ export const BorderCountriesContainer = styled.div`
   & span {
     font-weight: ${fontWeightLight};
   }
+
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+    display: flex;
+  }
 `;
 
 export const DetailBorderCountries = styled.div`
@@ -121,10 +143,13 @@ export const DetailBorderCountries = styled.div`
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 100%:
-  border: 1px solid red;
   width: 100%;
   margin-top: 2rem;
   padding-bottom:2rem;
+  @media (min-width: 1000px) {
+    margin-top:0rem;
+    width: 80%;
+  }
 `;
 
 export const DetailBorderCountry = styled.div`
@@ -141,5 +166,13 @@ export const DetailBorderCountry = styled.div`
   & h5 {
     font-size: 2rem;
     font-weight: ${fontWeightLight};
+    @media (min-width: 1000px) {
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 1000px) {
+    margin-top: 1rem;
+    width: 21%;
+    height: 3rem;
   }
 `;
