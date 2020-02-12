@@ -11,6 +11,7 @@ const TextFilter = ({ updateSearchFilter, isDarkMode }) => {
       <SearchIconDiv>
         <SearchIcon />
       </SearchIconDiv>
+      <label for="name"></label>
       <FilterTextInput
         type="text"
         name="name"
