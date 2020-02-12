@@ -5,7 +5,8 @@ import {
   fontWeightMedium,
   handleBoxShadowFromMode,
   handleColorFromMode,
-  darkBlue
+  darkBlue,
+  handleBackgroundFromMode
 } from '../../variables';
 
 export const DetailsPageContainer = styled.div`
@@ -31,7 +32,7 @@ export const DetailsComponentContainer = styled.div`
     margin-top: 14rem;
     font-size: 3.5rem;
     font-weight: ${fontWeightHeavy};
-
+    color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
     @media (min-width: 1000px) {
       margin-top: 12rem;
     }
@@ -57,9 +58,10 @@ export const BackButtonContainer = styled.div`
   font-size: 2.8rem;
   height: 6rem;
   width: 20.5rem;
-  background: white;
+  background: ${({ isDarkMode }) => handleBackgroundFromMode(isDarkMode)};
   border-radius: 0.5rem;
   box-shadow: ${({ isDarkMode }) => handleBoxShadowFromMode(isDarkMode)};
+  color: ${({ isDarkMode }) => handleColorFromMode(isDarkMode)};
   cursor: pointer;
 
   @media (min-width: 1000px) {

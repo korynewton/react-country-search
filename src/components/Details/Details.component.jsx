@@ -25,7 +25,7 @@ const DetailsComponent = ({
     languages
   } = countryDetails;
   return (
-    <DetailsComponentContainer>
+    <DetailsComponentContainer isDarkMode={isDarkMode}>
       <h2>{name}</h2>
       <DetailsTextContainer>
         <DetailDetails isDarkMode={isDarkMode}>
