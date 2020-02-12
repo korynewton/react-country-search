@@ -8,17 +8,18 @@ import {
 import DetailsComponent from '../components/Details/Details.component';
 import BackButtonComponent from '../components/Details/BackButton.component';
 
-const DetailsPage = ({ countryDetails, isDarkMode, ...rest }) => {
+const DetailsPage = ({ countryDetails, isDarkMode, history, ...rest }) => {
   useEffect(() => window.scrollTo(0, 0));
 
   return (
     <DetailsPageContainer>
-      <BackButtonComponent isDarkMode={isDarkMode} />
+      <BackButtonComponent isDarkMode={isDarkMode} history={history} />
       <DetailsContainer>
         <DetailFlag src={countryDetails.flag} />
         <DetailsComponent
           countryDetails={countryDetails}
           isDarkMode={isDarkMode}
+          history={history}
           {...rest}
         />
       </DetailsContainer>

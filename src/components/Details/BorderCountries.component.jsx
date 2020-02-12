@@ -18,6 +18,7 @@ const BorderCountriesComponent = ({ borderCountries, history, isDarkMode }) => {
       <DetailBorderCountries>
         {borderCountries.map(country => (
           <DetailBorderCountry
+            key={country.alpha3Code}
             isDarkMode={isDarkMode}
             onClick={() => navigateToBorderCountry(country.alpha3Code)}
           >

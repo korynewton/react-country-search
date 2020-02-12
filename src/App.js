@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { Route } from 'react-router-dom';
 
 import Header from './components/Header/HeaderComponent';
@@ -8,24 +8,21 @@ import MainContainer from './styles/Main/mainContainer.styles';
 import HomePage from './pages/HomePage';
 import DetailsPage from './pages/DetailsPage';
 
-// temporary so I dont have to keep fetching 250 countries
-import api_data from './api.json';
-
 class App extends React.Component {
   state = {
     isDarkMode: false,
     searchFilter: '',
     filteredRegion: '',
-    countries: api_data,
+    countries: [],
     filteredCountries: []
   };
 
-  // componentDidMount() {
-  //   axios
-  //     .get('https://restcountries.eu/rest/v2/all')
-  //     .then(res => this.setState({ countries: res.data }))
-  //     .catch(err => console.log(err));
-  // }
+  componentDidMount() {
+    axios
+      .get('https://restcountries.eu/rest/v2/all')
+      .then(res => this.setState({ countries: res.data }))
+      .catch(err => console.log(err));
+  }
 
   toggleMode = () => {
     this.setState(prevState => ({ isDarkMode: !prevState.isDarkMode }));
