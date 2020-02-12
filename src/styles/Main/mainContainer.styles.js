@@ -7,6 +7,7 @@ const MainContainer = styled.div`
   background: ${({ isDarkMode }) =>
     isDarkMode ? veryDarkBlueBackground : veryLightGrayBackground};
   padding-top: 4rem;
+  height: 100vh;
 `;
 
 export default MainContainer;
